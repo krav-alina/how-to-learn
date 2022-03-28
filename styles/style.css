@@ -331,7 +331,6 @@
 }
 
 .logo_place_footer {
-  position: absolute;
   width: 183px;
   height: 35px;
   top: 0;
@@ -345,6 +344,9 @@
   position: absolute;
   bottom: 18px;
   left: 0;
+  line-height: 25px;
+  font-size: 18px;
+  font-weight: normal;
 }
 
 .footer__column_content-info {
