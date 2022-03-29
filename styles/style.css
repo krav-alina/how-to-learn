@@ -17,19 +17,20 @@
   position: relative;
   display: flex;
   align-items: center;
+  overflow: hidden;
   /* выше установили ограничения для секции */
 }
 
 .logo {
-  position: absolute;
+  z-index: 1;
 }
 
 .logo_place_header {
+  position: absolute;
   width: 183px;
   height: 32px;
   top: 30px;
   left: 64px;
-  z-index: 1;
 }
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 
@@ -81,12 +82,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  padding-top: 100px;
 }
 
 .two-columns {
-  margin-top: 100px;
   width: 80%;
   display: flex;
+  justify-content: space-between;
 }
 
 .two-columns__brief {
@@ -113,7 +115,7 @@
   font-size: 24px;
 }
 
-.two-columns__paragraph2 {
+.two-columns__paragraph:nth-of-type(2n){
   margin: 30px 0;
   line-height: 34px;
   font-size: 24px;
@@ -133,7 +135,8 @@
   text-align: center;
   line-height: 1.15;
   font-size: 60px;
-  font-weight: 700;
+  font-weight: bolder;
+  z-index: 1;
 }
 
 .section-subtitle {
@@ -144,6 +147,7 @@
   line-height: 34px;
   font-size: 24px;
   font-weight: normal;
+  z-index: 1;
 }
 
 .table {
@@ -179,12 +183,13 @@
 }  
 
 .feynman {
-  height: 890px;
+  min-height: 890px;
   background-color: #f2f2f2;
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
   /* выше установили ограничения для секции */
 }
 
@@ -198,8 +203,7 @@
 
 .feynman__title {
   margin: 0;
-  position: absolute;
-  top: 100px;
+  margin-top: 100px;
   width: 648px;
   line-height: 1.15;
   font-size: 120px;
@@ -214,7 +218,7 @@
   width: 648px;
   line-height: 51px;
   font-size: 36px;
-  font-weight: 100;
+  font-weight: normal;
   text-align: center;
   z-index: 1;
 }
@@ -226,7 +230,7 @@
   top: 50%;
   line-height: 51px;
   font-size: 36px;
-  font-weight: 100;
+  font-weight: normal;
   z-index: 1;
   color: #2F80ED;
   text-decoration: none;
@@ -234,44 +238,24 @@
 
 .kaufman {
   margin: 0;
-  background-color: black;
+  background-color: #1f1f1f;
   overflow: hidden;
   position: relative;
+  z-index: -1;
 }
 
 .section-title_theme_dark {
-  width: 60%;
-  margin: auto;
   margin-top: 90px;
-  text-align: center;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: bolder;
   color: white;
-  z-index: 1;
 }
 
 .section-subtitle_theme_dark {
-  width: 60%;
-  margin: auto;
-  margin-top: 20px;
-  text-align: center;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
   color: white;
-  z-index: 1;
 }
 
 .table_theme_dark {
-  display: flex;
-  width: 1100px;
   margin: auto;
-  padding: 0;
   margin-bottom: 90px;
-  list-style: none;
-  flex-wrap: wrap;
-  justify-content: space-between;
   z-index: 1;
 }
 
@@ -285,18 +269,11 @@
 }
 
 .table__heading_theme_dark {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: bolder;
+  z-index: 1;
 }
 
 .table__text_theme_dark {
-  margin: 0;
-  margin-top: 20px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
+  z-index: 1;
 }
 
 .kaufman__triangle {
@@ -305,14 +282,14 @@
   top: 0;
   height: 877px;
   width: 877px;
+  z-index: -1;
 }
 
 .footer {
   min-height: 350px;
-  background-color: black;
-  color: azure;
-  align-items: center;
-  justify-content: center;
+  background-color: #1f1f1f;
+  color: white;
+  justify-content: space-around;
   display: flex;
 }
 
@@ -324,32 +301,26 @@
   justify-content: space-between;
 }
 
-.footer__column_content-copyright {
+.footer__column_content_copyright {
   flex-basis: 711px;
-  height: 200px;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .logo_place_footer {
   width: 183px;
   height: 35px;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
 
 .footer__author {
-  margin: 0;
-  margin-top: 18px;
-  position: absolute;
-  bottom: 18px;
-  left: 0;
+  margin: 18px 0;
   line-height: 25px;
   font-size: 18px;
   font-weight: normal;
 }
 
-.footer__column_content-info {
+.footer__column_content_info {
   margin: 0;
 }
 
@@ -366,12 +337,13 @@
   font-size: 18px;
   font-weight: normal;
   margin: 0;
-  margin-top: 18px;
+  margin-top: 20px;
+  margin-bottom: 16px;
   list-style: none;
   padding: 0;
 }
 
-.footer__column_content-social {
+.footer__column_content_social {
   margin: 0;
 }
 
@@ -385,7 +357,7 @@
 
 .footer__column-link {
   text-decoration: none;
-  color: azure;
+  color: white;
 }
 
 
