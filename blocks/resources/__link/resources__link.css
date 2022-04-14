@@ -5,3 +5,8 @@
     height: 38px;
     justify-content: center;
 }
+
+.resources__link:hover {
+    opacity: .5;
+    transition: ease-out 2s;
+  } 

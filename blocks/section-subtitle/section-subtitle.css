@@ -1,4 +1,5 @@
 .section-subtitle {
+    position: inherit;
     width: 60%;
     margin: auto;
     margin-top: 20px;

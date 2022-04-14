@@ -7,6 +7,7 @@
     }
   }
 
-  .animated {
+  .rotation {
     transform: translate(0, 50%);
+    animation: rotation 20s linear infinite; 
   }

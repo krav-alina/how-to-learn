@@ -1,8 +1,9 @@
 .video__iframe {
-    display: inline-block;
     margin: 50px 20px 0 0;
     width: 560px;
     height: 315px;
     z-index: 2;
     object-fit: cover;
+    object-position: center;
+    border:0;
 }
